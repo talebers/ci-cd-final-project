@@ -2,9 +2,11 @@ name: CI workflow
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -30,4 +32,3 @@ jobs:
       - name: Run unit tests with nose
         run: |
           nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
-          
